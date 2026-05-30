@@ -1,0 +1,130 @@
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group p {
+    margin: 5px 0;
+    font-weight: 500;
+}
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: 0.3s;
+}
+.form-group input:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 5px rgba(78,115,223,0.3);
+}
+input[type="file"] {
+    background: #f5f7fb;
+    cursor: pointer;
+}
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.btn-primary {
+    background: linear-gradient(135deg, #4e73df, #224abe);
+    color: white;
+}
+.btn-primary:hover {
+    opacity: 0.9;
+}
+.btn-secondary {
+    background: #ddd;
+    color: #333;
+}
+.btn-secondary:hover {
+    background: #ccc;
+}
+@media (max-width:768px){
+    .produk-top{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+        gap: 14px;
+    }
+    .card{
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .img-wrapper,
+    .img-placeholder{
+        height: 140px;
+        border-radius: 16px 16px 0 0;
+    }
+    .img-wrapper img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .3s ease;
+    }
+    .card-body{
+        padding: 12px;
+    }
+    .nama{
+        font-size: .82rem;
+        line-height: 1.4;
+        min-height: 38px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .harga{
+        font-size: .95rem;
+        font-weight: 700;
+        margin-top: 6px;
+    }
+    .btn-add{
+        width: 100%;
+        height: 40px;
+        border-radius: 12px;
+        font-size: .8rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .preview-img{
+    width: 100%;
+    min-width: 100%;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+    margin-top: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.08);
+}
+}

@@ -1,0 +1,159 @@
+.produk-page{
+    width: 100%;
+}
+.produk-toolbar{
+    margin-bottom: 24px;
+}
+.produk-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.produk-title{
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #111827;
+}
+.produk-search-wrap{
+    display: flex;
+    gap: 12px;
+}
+.produk-search{
+    flex: 1;
+}
+.produk-filter{
+    min-width: 170px;
+    border: none;
+    padding: 0 16px;
+    border-radius: 16px;
+    background: white;
+    box-shadow:
+        0 4px 14px rgba(0,0,0,.05);
+    cursor: pointer;
+}
+.produk-actions{
+    display: flex;
+    gap: 12px;
+}
+.btn-print-stock,
+.btn-add-product{
+    border: none;
+    padding: 12px 18px;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn-print-stock{
+    background: #111827;
+    color: white;
+}
+.btn-add-product{
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+    color: white;
+}
+.btn-print-stock:hover,
+.btn-add-product:hover{
+    transform: translateY(-2px);
+}
+.table-wrapper{
+    overflow-x: auto;
+    background: white;
+    border-radius: 24px;
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.08);
+    padding: 10px;
+}
+.produk-table{
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+.produk-table th{
+    background: #f8fafc;
+    color: #6b7280;
+    font-size: .85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 18px 14px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+.produk-table td{
+    padding: 16px 14px;
+    border-bottom: 1px solid #f3f4f6;
+    vertical-align: middle;
+}
+.produk-table tr:hover{
+    background: #f9fafb;
+}
+.produk-image{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.08);
+}
+.no-image{
+    color: #9ca3af;
+}
+.nama-produk{
+    font-weight: 700;
+    color: #111827;
+}
+.harga-cell{
+    font-weight: 800;
+    color: #2563eb;
+}
+.stok-cell{
+    font-weight: 700;
+    color: #16a34a;
+}
+.action-group{
+    display: flex;
+    gap: 8px;
+}
+.btn-edit,
+.btn-delete{
+    border: none;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn-edit{
+    background: #f3f4f6;
+}
+.btn-delete{
+    background: #ef4444;
+    color: white;
+}
+.btn-edit:hover,
+.btn-delete:hover{
+    transform: translateY(-2px);
+}
+@media(max-width:768px){
+    .produk-search-wrap,
+    .produk-header{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .produk-actions{
+        width: 100%;
+        flex-direction: column;
+    }
+    .action-group{
+        flex-direction: column;
+    }
+    .produk-title{
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,45 @@
+body {
+    font-family: 'Segoe UI', Arial;
+    margin: 0;
+    background: #f5f7fb;
+}
+.swal2-popup{
+    border-radius: 24px !important;
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.15) !important;
+    padding: 2rem !important;
+}
+.swal2-title{
+    font-weight: 800 !important;
+    font-size: 1.4rem !important;
+}
+.swal2-html-container{
+    color: #6b7280 !important;
+    font-size: .95rem !important;
+}
+.swal2-confirm,
+.swal2-cancel{
+    border-radius: 14px !important;
+    padding: 12px 22px !important;
+    font-weight: 700 !important;
+}
+/* MAIN */
+main {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #strukView, #strukView * {
+        visibility: visible;
+    }
+    #strukView {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body.forgot-page{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+}
+.forgot-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.forgot-card{
+    width: 100%;
+    max-width: 480px;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(20px);
+    border-radius: 28px;
+    padding: 34px;
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.15);
+}
+.forgot-header{
+    text-align: center;
+    margin-bottom: 28px;
+}
+.forgot-title{
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111827;
+}
+.forgot-subtitle{
+    margin-top: 8px;
+    color: #6b7280;
+    font-size: .95rem;
+}
+.error-box,
+.validation-box{
+    background: #fef2f2;
+    color: #dc2626;
+    border-radius: 16px;
+    padding: 14px;
+    margin-bottom: 16px;
+    font-size: .9rem;
+}
+.validation-box{
+    padding-left: 30px;
+}
+.forgot-form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.forgot-input{
+    width: 100%;
+    height: 56px;
+    border:
+        1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 0 18px;
+    background: #f9fafb;
+    outline: none;
+    font-size: .95rem;
+    transition: .3s;
+}
+.forgot-input:focus{
+    background: white;
+    border-color: #2563eb;
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.08);
+}
+.forgot-button{
+    width: 100%;
+    height: 56px;
+    border: none;
+    border-radius: 18px;
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+    color: white;
+    font-size: .95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+.forgot-button:hover{
+    transform: translateY(-2px);
+}
+@media(max-width:768px){
+    .forgot-card{
+        padding: 26px;
+        border-radius: 24px;
+    }
+}
+@media(max-width:480px){
+    body.forgot-page{
+        padding: 12px;
+    }
+    .forgot-card{
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .forgot-title{
+        font-size: 1.4rem;
+    }
+    .forgot-subtitle{
+        font-size: .85rem;
+    }
+    .forgot-input,
+    .forgot-button{
+        height: 50px;
+        font-size: .9rem;
+    }
+}

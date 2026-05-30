@@ -1,0 +1,215 @@
+:root{
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --success: #16a34a;
+    --danger: #ef4444;
+    --bg: #f8fafc;
+    --text: #111827;
+    --text-soft: #6b7280;
+    --border: rgba(0,0,0,.06);
+    --shadow-sm:
+        0 4px 12px rgba(0,0,0,.05);
+    --shadow-md:
+        0 10px 25px rgba(0,0,0,.08);
+    --shadow-lg:
+        0 18px 40px rgba(0,0,0,.12);
+    --transition:
+        all .28s cubic-bezier(.4,0,.2,1);
+}
+.produk{
+    width: 100%;
+}
+.produk-top{
+    display: flex;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+.search{
+    flex: 1;
+    height: 52px;
+    border: none;
+    outline: none;
+    padding: 0 18px;
+    border-radius: 18px;
+    background: white;
+    font-size: .95rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.search:focus{
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.08);
+}
+.filter{
+    min-width: 140px;
+    height: 52px;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    background: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.filter:hover{
+    transform: translateY(-2px);
+}
+.grid{
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fill, minmax(210px, 1fr));
+    gap: 20px;
+}
+.card{
+    position: relative;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.card:hover{
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+.img-wrapper{
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    background: #f3f4f6;
+}
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+.card:hover img{
+    transform: scale(1.08);
+}
+.img-placeholder{
+    width: 100%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #60a5fa
+        );
+    color: white;
+}
+.card-body{
+    padding: 16px;
+}
+.nama{
+    font-size: .95rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.4;
+    min-height: 42px;
+    margin-bottom: 10px;
+}
+.harga{
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+.stok{
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: .75rem;
+    font-weight: 700;
+    background: #f0fdf4;
+    color: var(--success);
+    margin-bottom: 14px;
+}
+.btn-add{
+    width: 100%;
+    height: 46px;
+    border: none;
+    border-radius: 16px;
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+    color: white;
+    font-size: .9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow:
+        0 8px 18px rgba(37,99,235,.18);
+}
+.btn-add:hover{
+    transform: translateY(-2px);
+}
+.btn-add:active{
+    transform: scale(.98);
+}
+.card.habis{
+    opacity: .85;
+}
+.card.habis img{
+    filter: grayscale(100%);
+}
+.card.habis::before{
+    content: "STOK HABIS";
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    background: var(--danger);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: .72rem;
+    font-weight: 700;
+    box-shadow:
+        0 6px 15px rgba(239,68,68,.25);
+}
+.card.habis .btn-add{
+    background: #d1d5db;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+@media (max-width:768px){
+    .produk-top{
+        flex-direction: column;
+    }
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+        gap: 14px;
+    }
+    .card{
+        border-radius: 20px;
+    }
+    .img-wrapper,
+    .img-placeholder{
+        height: 120px;
+    }
+    .card-body{
+        padding: 12px;
+    }
+    .nama{
+        font-size: .82rem;
+        min-height: 36px;
+    }
+    .harga{
+        font-size: .95rem;
+    }
+    .btn-add{
+        height: 40px;
+        font-size: .8rem;
+    }
+}
