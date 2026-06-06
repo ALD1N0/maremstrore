@@ -104,7 +104,7 @@ $bulan = [
     <button
         onclick="printSemua()"
         class="btn-print-stock">
-        🖨️ Cetak Transaksi
+        🖨️ Cetak Laporan
     </button>
     <!-- TABLE KEUNTUNGAN -->
     <div class="profit-card">
@@ -130,7 +130,7 @@ $bulan = [
     </div>
     <!-- RIWAYAT -->
     <h2 class="section-title">
-        Riwayat Transaksi
+        Laporan Transaksi
     </h2>
     <div class="content-print">
         @foreach($transaksis as $t)

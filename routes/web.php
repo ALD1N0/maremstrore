@@ -8,14 +8,15 @@ use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\DetailTransaksiController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ForgotPasswordController;
-use App\Http\Controllers\ModelGrafikController;
+
+use App\Http\Controllers\DashboardController;
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/', [HomeController::class, 'index'])->name('home');
-
+    Route::get('/Transaksi', [HomeController::class, 'index'])->name('home');
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
     Route::get('/produk/create', [ProdukController::class, 'create'])->name('produk.create');
     Route::post('/produk', [ProdukController::class, 'store'])->name('produk.store');
@@ -51,8 +52,6 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/profile/new-password', [ProfileController::class, 'newPasswordForm'])->name('profile.new.password.form');
     Route::post('/profile/update-password', [ProfileController::class, 'updatePassword'])->name('profile.update.password');
-
-    Route::get('/modelgrafik', [ModelGrafikController::class, 'Grafik'])->name('modelgrafik');
 
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });

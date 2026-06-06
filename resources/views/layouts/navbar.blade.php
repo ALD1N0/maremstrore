@@ -5,19 +5,22 @@
             ☰
         </div>
         <nav class="nav-menu" id="nav-menu">
-            <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">
+            <a href="{{ route('dashboard') }}"class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                 Dashboard
+            </a>
+            <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">
+                Transaksi
             </a>
             <a href="{{ route('produk.index') }}" class="nav-link {{ request()->routeIs('produk.*') ? 'active' : '' }}">
                 Barang
             </a>
             <a href="{{ route('riwayat') }}" class="nav-link {{ request()->routeIs('riwayat') ? 'active' : '' }}">
-                Riwayat
+                Laporan
             </a>
             <a href="{{ route('profile') }}" class="nav-link {{ request()->routeIs('profile') ? 'active' : '' }}">
                 Profile
             </a>
-          
+
         </nav>
     </div>
 </header>
